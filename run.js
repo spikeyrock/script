@@ -18,6 +18,11 @@ for (i = 0; i < 525; i++) {
     silver_commonChars_total[i] = value;
 };
 
+fs.writeFile('silver_commonChars_total.json', silver_commonChars_total, function (err) {
+    if (err) throw err;
+    console.log('Saved!');
+});
+
 const gold_commonChars_total = [];
 for (i = 0; i < 455; i++) {
     var value = common_characters[Math.floor(Math.random() * common_characters.length)];
@@ -66,6 +71,11 @@ for (i = 0; i < 325; i++) {
     var value = common_pets[Math.floor(Math.random() * common_pets.length)];
     gold_commonPets_total[i] = value;
 };
+fs.writeFile('gold_commonPets_total.json', gold_commonPets_total, function (err) {
+    if (err) throw err;
+    console.log('Saved!');
+});
+
 
 const diamond_commonPets_total = [];
 for (i = 0; i < 150; i++) {
@@ -88,22 +98,39 @@ for (i = 0; i < 45; i++) {
 
 // land array
 const land_total = Array(150).fill("Forrest Land");
+fs.writeFile('land_total.json', land_total, function (err) {
+    if (err) throw err;
+    console.log('Saved!');
+});
 
 
 // if else to select chest
 
 const gold_chars_total = gold_commonChars_total.concat(gold_rareChars_total);
 const gold_chars_S_total = gold_chars_total.sort(() => Math.random() - 0.5);
+fs.writeFile('gold_chars_S_total.json', gold_chars_S_total, function (err) {
+    if (err) throw err;
+    console.log('Saved!');
+});
+
 
 const diamond_chars_total = diamond_commonChars_total.concat(diamond_rareChars_total, diamond_legendaryChars_total, diamond_mysticChars_total);
 const diamond_chars_S_total = diamond_chars_total.sort(() => Math.random() - 0.5);
+fs.writeFile('diamond_chars_S_total.json', diamond_chars_S_total, function (err) {
+    if (err) throw err;
+    console.log('Saved!');
+});
+
 
 const diamond_pets_total = diamond_commonPets_total.concat(diamond_rarePets_total, diamond_legendaryPets_total);
 const diamond_pets_S_total = diamond_pets_total.sort(() => Math.random() - 0.5);
+fs.writeFile('diamond_pets_S_total.json', diamond_pets_S_total, function (err) {
+    if (err) throw err;
+    console.log('Saved!');
+});
 
 
-
-let x = '0.75eth';
+let x = '-';
 var y = 0;
 
 
@@ -122,7 +149,7 @@ function goldBuy(params) {
     // 2 characters & 1 pet
     var char1 = gold_chars_S_total.pop();
     var char2 = gold_chars_S_total.pop();
-    var pet = common_pets.pop()
+    var pet = gold_commonPets_total.pop()
     Items_Received = [char1, char2, pet];
 
     //result = [];
