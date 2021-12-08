@@ -2,8 +2,6 @@
 const fs = require('fs')
 
 
-
-
 const common_characters = ["Fabian-1", "Gwen-1", "Hector-1", "Ho-Jin-1", "Idore-1", "Lucius-1", "Maze-1", "Sabrina-1", "Templar-1", "Theia-1"];
 
 const rare_characters = ["Fabian-2", "Gwen-2", "Hector-2", "Ho-Jin-2", "Idore-2", "Lucius-2", "Maze-2", "Sabrina-2", "Templar-2", "Theia-2"];
@@ -36,9 +34,6 @@ for (i = 0; i < 330; i++) {
     diamond_commonChars_total[i] = value;
 
 }
-// console.log(silver_commonChars_total);
-// console.log(gold_commonChars_total);
-// console.log(diamond_commonChars_total);
 
 const gold_rareChars_total = [];
 for (i = 0; i < 195; i++) {
@@ -121,40 +116,43 @@ const diamond_pets_S_total = diamond_pets_total.sort(() => Math.random() - 0.5);
 
 
 
-
 let x = '0.75eth';
 var y = 0;
 
 
 function silverBuy(params) {
+    // 1 character
     var char = silver_commonChars_total.pop();
     Items_Received = [char];
+
+    //result = [];
+    console.log(Items_Received)
+    console.log(silver_commonChars_total)
 
 };
 
 function goldBuy(params) {
-    // 2 characters
+    // 2 characters & 1 pet
     var char1 = gold_chars_S_total.pop();
     var char2 = gold_chars_S_total.pop();
     var pet = common_pets.pop()
     Items_Received = [char1, char2, pet];
 
-    console.log(Items_Received);
-
+    //result = [];
+    console.log(Items_Received)
+    console.log(gold_chars_S_total)
+    console.log(common_pets)
 
 };
 
 function diamondBuy(params) {
-    // 4 characters
+    // 4 characters & 2 pets & 1 land
     var char1 = diamond_chars_S_total.pop();
     var char2 = diamond_chars_S_total.pop();
     var char3 = diamond_chars_S_total.pop();
     var char4 = diamond_chars_S_total.pop();
-
-    // 2 pets
     var pet1 = diamond_pets_S_total.pop();
     var pet2 = diamond_pets_S_total.pop();
-
     var land = land_total.pop(value);
 
     //result = [];
@@ -163,9 +161,6 @@ function diamondBuy(params) {
     console.log(diamond_chars_S_total)
     console.log(diamond_pets_S_total)
     console.log(land_total)
-
-
-    // result.push(Items_Received);
 
 };
 
