@@ -12,16 +12,19 @@ const mystic_characters = ["Fabian-4", "Gwen-4", "Hector-4", "Ho-Jin-4", "Idore-
 
 // character selection arrays
 
-const silver_commonChars_total = [];
+
+const silver_commonChars_total = {};
 for (i = 0; i < 525; i++) {
     var value = common_characters[Math.floor(Math.random() * common_characters.length)];
     silver_commonChars_total[i] = value;
 };
 
-fs.writeFile('silver_commonChars_total.json', silver_commonChars_total, function (err) {
+let SilverOutput = JSON.stringify(silver_commonChars_total)
+fs.writeFile('SilverOutput.json', SilverOutput, function (err) {
     if (err) throw err;
     console.log('Saved!');
 });
+
 
 const gold_commonChars_total = [];
 for (i = 0; i < 455; i++) {
@@ -66,12 +69,14 @@ const rare_pets = ["Chiron-2", "Fleta-2", "Griffin-2"];
 const legendary_pets = ["Chiron-3", "Fleta-3", "Griffin-3"];
 
 // pet selection arrays
-const gold_commonPets_total = [];
+const gold_commonPets_total = {};
 for (i = 0; i < 325; i++) {
     var value = common_pets[Math.floor(Math.random() * common_pets.length)];
     gold_commonPets_total[i] = value;
 };
-fs.writeFile('gold_commonPets_total.json', gold_commonPets_total, function (err) {
+
+let GoldCommonPetOutput = JSON.stringify(gold_commonPets_total)
+fs.writeFile('GoldCommonPetOutput.json', GoldCommonPetOutput, function (err) {
     if (err) throw err;
     console.log('Saved!');
 });
@@ -98,7 +103,14 @@ for (i = 0; i < 45; i++) {
 
 // land array
 const land_total = Array(150).fill("Forrest Land");
-fs.writeFile('land_total.json', land_total, function (err) {
+
+land_dict = {}
+for (i = 0; i < land_total.length; i++) {
+    land_dict[i] = land_total[i];
+}
+let LandOutput = JSON.stringify(land_dict)
+
+fs.writeFile('LandOutput.json', LandOutput, function (err) {
     if (err) throw err;
     console.log('Saved!');
 });
@@ -108,7 +120,18 @@ fs.writeFile('land_total.json', land_total, function (err) {
 
 const gold_chars_total = gold_commonChars_total.concat(gold_rareChars_total);
 const gold_chars_S_total = gold_chars_total.sort(() => Math.random() - 0.5);
-fs.writeFile('gold_chars_S_total.json', gold_chars_S_total, function (err) {
+
+console.log(gold_chars_S_total);
+
+g_dict = {};
+console.log(g_dict);
+for (i = 0; i < gold_chars_S_total.length; i++) {
+    g_dict[i] = gold_chars_S_total[i];
+}
+console.log(g_dict);
+
+let GoldCharOutput = JSON.stringify(g_dict)
+fs.writeFile('GoldCharOutput.json', GoldCharOutput, function (err) {
     if (err) throw err;
     console.log('Saved!');
 });
@@ -116,7 +139,13 @@ fs.writeFile('gold_chars_S_total.json', gold_chars_S_total, function (err) {
 
 const diamond_chars_total = diamond_commonChars_total.concat(diamond_rareChars_total, diamond_legendaryChars_total, diamond_mysticChars_total);
 const diamond_chars_S_total = diamond_chars_total.sort(() => Math.random() - 0.5);
-fs.writeFile('diamond_chars_S_total.json', diamond_chars_S_total, function (err) {
+
+d_dict = {};
+for (i = 0; i < diamond_chars_S_total.length; i++) {
+    d_dict[i] = diamond_chars_S_total;
+}
+let DiamondCharOutput = JSON.stringify(g_dict)
+fs.writeFile('DiamondCharOutput.json', DiamondCharOutput, function (err) {
     if (err) throw err;
     console.log('Saved!');
 });
@@ -124,7 +153,13 @@ fs.writeFile('diamond_chars_S_total.json', diamond_chars_S_total, function (err)
 
 const diamond_pets_total = diamond_commonPets_total.concat(diamond_rarePets_total, diamond_legendaryPets_total);
 const diamond_pets_S_total = diamond_pets_total.sort(() => Math.random() - 0.5);
-fs.writeFile('diamond_pets_S_total.json', diamond_pets_S_total, function (err) {
+
+dp_dict = {}
+for (i = 0; i < diamond_pets_S_total.length; i++) {
+    dp_dict[i] = diamond_pets_S_total[i];
+}
+let DiamondPetOutput = JSON.stringify(dp_dict)
+fs.writeFile('DiamondPetOutput.json', DiamondPetOutput, function (err) {
     if (err) throw err;
     console.log('Saved!');
 });
