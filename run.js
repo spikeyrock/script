@@ -15,9 +15,7 @@ const mystic_characters = ["Fabian-4", "Gwen-4", "Hector-4", "Ho-Jin-4", "Idore-
 const silver_commonChars_total = [];
 for (i = 0; i < 525; i++) {
     var value = common_characters[Math.floor(Math.random() * common_characters.length)];
-
     silver_commonChars_total[i] = value;
-
 }
 
 const gold_commonChars_total = [];
@@ -30,43 +28,32 @@ for (i = 0; i < 455; i++) {
 const diamond_commonChars_total = [];
 for (i = 0; i < 330; i++) {
     var value = common_characters[Math.floor(Math.random() * common_characters.length)];
-
     diamond_commonChars_total[i] = value;
-
 }
 
 const gold_rareChars_total = [];
 for (i = 0; i < 195; i++) {
     var value = rare_characters[Math.floor(Math.random() * rare_characters.length)];
-
     gold_rareChars_total[i] = value;
-
 }
 
 const diamond_rareChars_total = [];
 for (i = 0; i < 150; i++) {
     var value = rare_characters[Math.floor(Math.random() * rare_characters.length)];
-
     diamond_rareChars_total[i] = value;
-
 }
 
 const diamond_legendaryChars_total = [];
 for (i = 0; i < 90; i++) {
     var value = legendary_characters[Math.floor(Math.random() * legendary_characters.length)];
-
     diamond_legendaryChars_total[i] = value;
-
 }
 
 const diamond_mysticChars_total = [];
 for (i = 0; i < 30; i++) {
     var value = mystic_characters[Math.floor(Math.random() * mystic_characters.length)];
-
     diamond_mysticChars_total[i] = value;
-
 }
-
 
 // pet arrays
 const common_pets = ["Chiron-1", "Fleta-1", "Griffin-1"];
