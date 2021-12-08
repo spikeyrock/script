@@ -16,44 +16,44 @@ const silver_commonChars_total = [];
 for (i = 0; i < 525; i++) {
     var value = common_characters[Math.floor(Math.random() * common_characters.length)];
     silver_commonChars_total[i] = value;
-}
+};
 
 const gold_commonChars_total = [];
 for (i = 0; i < 455; i++) {
     var value = common_characters[Math.floor(Math.random() * common_characters.length)];
     gold_commonChars_total[i] = value;
 
-}
+};
 
 const diamond_commonChars_total = [];
 for (i = 0; i < 330; i++) {
     var value = common_characters[Math.floor(Math.random() * common_characters.length)];
     diamond_commonChars_total[i] = value;
-}
+};
 
 const gold_rareChars_total = [];
 for (i = 0; i < 195; i++) {
     var value = rare_characters[Math.floor(Math.random() * rare_characters.length)];
     gold_rareChars_total[i] = value;
-}
+};
 
 const diamond_rareChars_total = [];
 for (i = 0; i < 150; i++) {
     var value = rare_characters[Math.floor(Math.random() * rare_characters.length)];
     diamond_rareChars_total[i] = value;
-}
+};
 
 const diamond_legendaryChars_total = [];
 for (i = 0; i < 90; i++) {
     var value = legendary_characters[Math.floor(Math.random() * legendary_characters.length)];
     diamond_legendaryChars_total[i] = value;
-}
+};
 
 const diamond_mysticChars_total = [];
 for (i = 0; i < 30; i++) {
     var value = mystic_characters[Math.floor(Math.random() * mystic_characters.length)];
     diamond_mysticChars_total[i] = value;
-}
+};
 
 // pet arrays
 const common_pets = ["Chiron-1", "Fleta-1", "Griffin-1"];
@@ -71,19 +71,19 @@ const diamond_commonPets_total = [];
 for (i = 0; i < 150; i++) {
     var value = common_pets[Math.floor(Math.random() * common_pets.length)];
     diamond_commonPets_total[i] = value;
-}
+};
 
 const diamond_rarePets_total = [];
 for (i = 0; i < 105; i++) {
     var value = rare_pets[Math.floor(Math.random() * rare_pets.length)];
     diamond_rarePets_total[i] = value;
-}
+};
 
 const diamond_legendaryPets_total = [];
 for (i = 0; i < 45; i++) {
     var value = legendary_pets[Math.floor(Math.random() * legendary_pets.length)];
     diamond_legendaryPets_total[i] = value;
-}
+};
 
 
 // land array
