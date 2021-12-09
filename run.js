@@ -1,17 +1,13 @@
 // character arrays - 4 types
 const fs = require('fs')
 
-
 const common_characters = ["Fabian-1", "Gwen-1", "Hector-1", "Ho-Jin-1", "Idore-1", "Lucius-1", "Maze-1", "Sabrina-1", "Templar-1", "Theia-1"];
-
 const rare_characters = ["Fabian-2", "Gwen-2", "Hector-2", "Ho-Jin-2", "Idore-2", "Lucius-2", "Maze-2", "Sabrina-2", "Templar-2", "Theia-2"];
-
 const legendary_characters = ["Fabian-3", "Gwen-3", "Hector-3", "Ho-Jin-3", "Idore-3", "Lucius-3", "Maze-3", "Sabrina-3", "Templar-3", "Theia-3"];
-
 const mystic_characters = ["Fabian-4", "Gwen-4", "Hector-4", "Ho-Jin-4", "Idore-4", "Lucius-4", "Maze-4", "Sabrina-4", "Templar-4", "Theia-4"];
 
-// character selection arrays
 
+// character selection arrays
 
 const silver_commonChars_total = [];
 for (i = 0; i < 525; i++) {
