@@ -75,7 +75,6 @@ fs.writeFile('GoldCommonPetOutput.json', GoldCommonPetOutput, function (err) {
     console.log('Saved!');
 });
 
-
 const diamond_commonPets_total = [];
 for (i = 0; i < 150; i++) {
     var value = common_pets[Math.floor(Math.random() * common_pets.length)];
@@ -103,7 +102,6 @@ fs.writeFile('LandOutput.json', LandOutput, function (err) {
     console.log('Saved!');
 });
 
-
 // if else to select chest
 
 const gold_chars_total = gold_commonChars_total.concat(gold_rareChars_total);
@@ -114,7 +112,6 @@ fs.writeFile('GoldCharOutput.json', GoldCharOutput, function (err) {
     console.log('Saved!');
 });
 
-
 const diamond_chars_total = diamond_commonChars_total.concat(diamond_rareChars_total, diamond_legendaryChars_total, diamond_mysticChars_total);
 const diamond_chars_S_total = diamond_chars_total.sort(() => Math.random() - 0.5);
 let DiamondCharOutput = JSON.stringify(diamond_chars_S_total)
@@ -122,7 +119,6 @@ fs.writeFile('DiamondCharOutput.json', DiamondCharOutput, function (err) {
     if (err) throw err;
     console.log('Saved!');
 });
-
 
 const diamond_pets_total = diamond_commonPets_total.concat(diamond_rarePets_total, diamond_legendaryPets_total);
 const diamond_pets_S_total = diamond_pets_total.sort(() => Math.random() - 0.5);
@@ -133,8 +129,8 @@ fs.writeFile('DiamondPetOutput.json', DiamondPetOutput, function (err) {
 });
 
 
+
 let x = '-';
-var y = 0;
 
 
 function silverBuy(params) {
@@ -180,7 +176,6 @@ function diamondBuy(params) {
     console.log(land_total)
 
 };
-
 
 if (x == '0.1eth') {
     Items_Received = silverBuy();
