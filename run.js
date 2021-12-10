@@ -20,7 +20,6 @@ fs.writeFile('SilverOutput.json', SilverOutput, function (err) {
     console.log('Saved!');
 });
 
-
 const gold_commonChars_total = [];
 for (i = 0; i < 455; i++) {
     var value = common_characters[Math.floor(Math.random() * common_characters.length)];
