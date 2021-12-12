@@ -69,12 +69,6 @@ for (i = 0; i < 325; i++) {
     var value = common_pets[Math.floor(Math.random() * common_pets.length)];
     gold_commonPets_total[i] = value;
 };
-//let GoldCommonPetOutput = JSON.stringify(gold_commonPets_total)
-// fs.writeFile('GoldCommonPetOutput.json', GoldCommonPetOutput, function (err) {
-//     if (err) throw err;
-//     console.log('Saved!');
-// });
-
 
 const diamond_commonPets_total = [];
 for (i = 0; i < 150; i++) {
@@ -98,41 +92,25 @@ for (i = 0; i < 45; i++) {
 // land array
 const land_total = Array(150).fill("L-Forrest Land");
 let LandOutput = JSON.stringify(land_total)
-// fs.writeFile('LandOutput.json', LandOutput, function (err) {
-//     if (err) throw err;
-//     console.log('Saved!');
-// });
 
 // if else to select chest
 
 const gold_chars_total = gold_commonChars_total.concat(gold_rareChars_total);
 const gold_chars_S_total = gold_chars_total.sort(() => Math.random() - 0.5);
 let GoldCharOutput = JSON.stringify(gold_chars_S_total)
-// fs.writeFile('GoldCharOutput.json', GoldCharOutput, function (err) {
-//     if (err) throw err;
-//     console.log('Saved!');
-// });
-
 const diamond_chars_total = diamond_commonChars_total.concat(diamond_rareChars_total, diamond_legendaryChars_total, diamond_mysticChars_total);
 const diamond_chars_S_total = diamond_chars_total.sort(() => Math.random() - 0.5);
 let DiamondCharOutput = JSON.stringify(diamond_chars_S_total)
-// fs.writeFile('DiamondCharOutput.json', DiamondCharOutput, function (err) {
-//     if (err) throw err;
-//     console.log('Saved!');
-// });
 
 const diamond_pets_total = diamond_commonPets_total.concat(diamond_rarePets_total, diamond_legendaryPets_total);
 const diamond_pets_S_total = diamond_pets_total.sort(() => Math.random() - 0.5);
 let DiamondPetOutput = JSON.stringify(diamond_pets_S_total)
-// fs.writeFile('DiamondPetOutput.json', DiamondPetOutput, function (err) {
-//     if (err) throw err;
-//     console.log('Saved!');
-// });
+
 
 var final_gold_op=[];
 g_dict = {};
 
-for(i=0; i<gold_commonPets_total.length; i++){
+for(i=0; i<325; i++){
     var c1 = gold_chars_S_total.pop();
     var c2 = gold_chars_S_total.pop();
     var p1 = gold_commonPets_total.pop()
@@ -151,7 +129,7 @@ d_dict = {};
 console.log(land_total.length);
 console.log(gold_commonPets_total.length);
 
-for(i=0; i<land_total.length; i++){
+for(i=0; i<150; i++){
     var c1 = diamond_chars_S_total.pop();
     var c2 = diamond_chars_S_total.pop();
     var c3 = diamond_chars_S_total.pop();
@@ -171,70 +149,3 @@ for(i=0; i<land_total.length; i++){
 
 }
 
-// console.log(final_diamond_op);
-// fs.writeFile('final_diamond_op.json', final_diamond_op, function (err) {
-//     if (err) throw err;
-//     console.log('Saved!');
-// });
-
-
-
-// let x = '-';
-
-
-// function silverBuy(params) {
-//     // 1 character
-//     var char = silver_commonChars_total.pop();
-//     Items_Received = [char];
-
-//     //result = [];
-//     console.log(Items_Received)
-//     console.log(silver_commonChars_total)
-
-// };
-
-// function goldBuy(params) {
-//     // 2 characters & 1 pet
-//     var char1 = gold_chars_S_total.pop();
-//     var char2 = gold_chars_S_total.pop();
-//     var pet = gold_commonPets_total.pop()
-//     Items_Received = [char1, char2, pet];
-
-//     //result = [];
-//     console.log(Items_Received)
-//     console.log(gold_chars_S_total)
-//     console.log(common_pets)
-
-// };
-
-// function diamondBuy(params) {
-//     // 4 characters & 2 pets & 1 land
-//     var char1 = diamond_chars_S_total.pop();
-//     var char2 = diamond_chars_S_total.pop();
-//     var char3 = diamond_chars_S_total.pop();
-//     var char4 = diamond_chars_S_total.pop();
-//     var pet1 = diamond_pets_S_total.pop();
-//     var pet2 = diamond_pets_S_total.pop();
-//     var land = land_total.pop(value);
-
-//     //result = [];
-//     Items_Received = [char1, char2, char3, char4, pet1, pet2, land];
-//     console.log(Items_Received)
-//     console.log(diamond_chars_S_total)
-//     console.log(diamond_pets_S_total)
-//     console.log(land_total)
-
-// };
-
-// if (x == '0.1eth') {
-//     Items_Received = silverBuy();
-// };
-
-// if (x == '0.3eth') {
-//     Items_Received = goldBuy();
-// };
-
-// if (x == '0.75eth') {
-//     Items_Received = diamondBuy();
-
-// };
